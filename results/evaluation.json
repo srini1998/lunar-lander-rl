@@ -1,0 +1,7 @@
+{
+  "model": "/Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/results/dqn_stock/best_model.zip",
+  "episodes": 100,
+  "mean": 244.99559126,
+  "std": 49.83316650166713,
+  "solved": true
+}

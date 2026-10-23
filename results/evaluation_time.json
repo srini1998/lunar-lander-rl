@@ -1,0 +1,7 @@
+{
+  "model": "results/shaped_time/best_model.zip",
+  "episodes": 100,
+  "mean": 262.34317761,
+  "std": 29.696039032707823,
+  "solved": true
+}

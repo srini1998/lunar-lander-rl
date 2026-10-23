@@ -1,0 +1,7 @@
+{
+  "model": "results/shaped_fuel/best_model.zip",
+  "episodes": 100,
+  "mean": 253.52026972,
+  "std": 66.39059985791205,
+  "solved": true
+}

@@ -1,0 +1,7 @@
+{
+  "model": "results/shaped_tilt/best_model.zip",
+  "episodes": 100,
+  "mean": 244.65540670000001,
+  "std": 65.49189245729235,
+  "solved": true
+}
