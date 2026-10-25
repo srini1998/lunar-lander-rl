@@ -1,0 +1,111 @@
+objc[85669]: Class SDL_RumbleMotor is implemented in both /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x114694d40) and /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x117d809c8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[85669]: Class SDL_RumbleContext is implemented in both /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x114694d90) and /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x117d80a18). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[85669]: Class SDLApplication is implemented in both /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x114694890) and /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x117d80a68). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[85669]: Class SDLAppDelegate is implemented in both /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x1146948e0) and /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x117d80ab8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[85669]: Class SDLTranslatorResponder is implemented in both /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x114694958) and /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x117d80b30). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[85669]: Class SDLMessageBoxPresenter is implemented in both /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x114694980) and /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x117d80b58). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[85669]: Class SDL_cocoametalview is implemented in both /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x1146949d0) and /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x117d80ba8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[85669]: Class SDLOpenGLContext is implemented in both /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x114694a20) and /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x117d80bf8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[85669]: Class SDL_ShapeData is implemented in both /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x114694a98) and /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x117d80c70). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[85669]: Class SDL_CocoaClosure is implemented in both /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x114694ae8) and /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x117d80cc0). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[85669]: Class SDL_VideoData is implemented in both /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x114694b38) and /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x117d80d10). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[85669]: Class SDL_WindowData is implemented in both /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x114694b88) and /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x117d80d60). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[85669]: Class SDLWindow is implemented in both /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x114694bb0) and /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x117d80d88). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[85669]: Class Cocoa_WindowListener is implemented in both /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x114694bd8) and /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x117d80db0). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[85669]: Class SDLView is implemented in both /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x114694c50) and /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x117d80e28). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[85669]: Class METAL_RenderData is implemented in both /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x114694cc8) and /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x117d80ea0). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[85669]: Class METAL_TextureData is implemented in both /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x114694d18) and /Users/srinivenigalla/My-Projects/Luna-lander-rl/lunar-lander-rl/.venv/lib/python3.12/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x117d80ef0). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+Eval num_timesteps=24992, episode_reward=-101.62 +/- 79.86
+Episode length: 85.85 +/- 12.66
+New best mean reward!
+Eval num_timesteps=49984, episode_reward=-183.03 +/- 104.61
+Episode length: 102.85 +/- 12.85
+Eval num_timesteps=74976, episode_reward=-94.70 +/- 75.25
+Episode length: 100.90 +/- 15.17
+New best mean reward!
+Eval num_timesteps=99968, episode_reward=-132.50 +/- 100.14
+Episode length: 127.30 +/- 43.85
+Eval num_timesteps=124960, episode_reward=-154.52 +/- 71.95
+Episode length: 134.15 +/- 29.48
+Eval num_timesteps=149952, episode_reward=-61.49 +/- 139.99
+Episode length: 223.85 +/- 138.11
+New best mean reward!
+Eval num_timesteps=174944, episode_reward=-118.69 +/- 81.45
+Episode length: 269.45 +/- 157.93
+Eval num_timesteps=199936, episode_reward=-14.19 +/- 165.98
+Episode length: 423.60 +/- 194.50
+New best mean reward!
+Eval num_timesteps=224928, episode_reward=27.72 +/- 131.57
+Episode length: 344.20 +/- 212.50
+New best mean reward!
+Eval num_timesteps=249920, episode_reward=82.08 +/- 92.09
+Episode length: 302.30 +/- 133.74
+New best mean reward!
+Eval num_timesteps=274912, episode_reward=165.06 +/- 106.53
+Episode length: 344.50 +/- 72.03
+New best mean reward!
+Eval num_timesteps=299904, episode_reward=119.82 +/- 112.51
+Episode length: 315.60 +/- 108.04
+Eval num_timesteps=324896, episode_reward=125.48 +/- 120.11
+Episode length: 297.05 +/- 72.84
+Eval num_timesteps=349888, episode_reward=200.26 +/- 111.27
+Episode length: 348.25 +/- 93.97
+New best mean reward!
+Eval num_timesteps=374880, episode_reward=133.89 +/- 123.78
+Episode length: 299.05 +/- 75.30
+Eval num_timesteps=399872, episode_reward=217.24 +/- 95.28
+Episode length: 324.55 +/- 44.40
+New best mean reward!
+Eval num_timesteps=424864, episode_reward=212.28 +/- 81.99
+Episode length: 343.45 +/- 47.87
+Eval num_timesteps=449856, episode_reward=244.26 +/- 23.92
+Episode length: 361.15 +/- 35.98
+New best mean reward!
+Eval num_timesteps=474848, episode_reward=236.37 +/- 64.74
+Episode length: 327.20 +/- 29.04
+Eval num_timesteps=499840, episode_reward=252.88 +/- 19.11
+Episode length: 320.55 +/- 33.37
+New best mean reward!
+Eval num_timesteps=524832, episode_reward=238.39 +/- 53.16
+Episode length: 337.50 +/- 55.47
+Eval num_timesteps=549824, episode_reward=234.89 +/- 54.32
+Episode length: 348.05 +/- 50.75
+Eval num_timesteps=574816, episode_reward=234.43 +/- 50.52
+Episode length: 382.75 +/- 58.76
+Eval num_timesteps=599808, episode_reward=238.81 +/- 17.49
+Episode length: 412.95 +/- 49.23
+Eval num_timesteps=624800, episode_reward=248.33 +/- 13.65
+Episode length: 391.75 +/- 43.25
+Eval num_timesteps=649792, episode_reward=231.03 +/- 30.14
+Episode length: 433.05 +/- 134.08
+Eval num_timesteps=674784, episode_reward=242.29 +/- 15.71
+Episode length: 462.55 +/- 56.47
+Eval num_timesteps=699776, episode_reward=239.05 +/- 15.77
+Episode length: 437.25 +/- 48.44
+Eval num_timesteps=724768, episode_reward=249.60 +/- 14.59
+Episode length: 413.30 +/- 45.03
+Eval num_timesteps=749760, episode_reward=232.37 +/- 27.70
+Episode length: 465.35 +/- 45.45
+Eval num_timesteps=774752, episode_reward=240.79 +/- 23.18
+Episode length: 411.35 +/- 27.96
+Eval num_timesteps=799744, episode_reward=246.34 +/- 23.48
+Episode length: 400.80 +/- 43.04
+Eval num_timesteps=824736, episode_reward=253.44 +/- 19.89
+Episode length: 386.70 +/- 17.95
+New best mean reward!
+Eval num_timesteps=849728, episode_reward=246.36 +/- 22.15
+Episode length: 420.10 +/- 27.13
+Eval num_timesteps=874720, episode_reward=244.89 +/- 19.84
+Episode length: 413.45 +/- 15.40
+Eval num_timesteps=899712, episode_reward=246.62 +/- 17.49
+Episode length: 402.85 +/- 18.64
+Eval num_timesteps=924704, episode_reward=250.40 +/- 23.66
+Episode length: 401.70 +/- 19.30
+Eval num_timesteps=949696, episode_reward=241.51 +/- 19.24
+Episode length: 410.75 +/- 19.39
+Eval num_timesteps=974688, episode_reward=251.25 +/- 22.49
+Episode length: 380.60 +/- 18.64
+Eval num_timesteps=999680, episode_reward=246.67 +/- 58.03
+Episode length: 392.70 +/- 47.53
+
+100-episode mean: 250.0 +/- 20.8 | >=200: 100/100 | crashes: 0 | SOLVED

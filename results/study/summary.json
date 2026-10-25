@@ -1,0 +1,34 @@
+{
+  "stock": {
+    "seeds": 5,
+    "final_mean": -1.0320316020000007,
+    "final_std": 223.2825055932223,
+    "seeds_reaching_200": 5,
+    "median_first_200": 50000.0,
+    "auc": 64.526904121
+  },
+  "tilt": {
+    "seeds": 5,
+    "final_mean": -15.103003290000009,
+    "final_std": 218.21133939368582,
+    "seeds_reaching_200": 5,
+    "median_first_200": 90000.0,
+    "auc": 29.759529811666663
+  },
+  "time": {
+    "seeds": 5,
+    "final_mean": 123.503721198,
+    "final_std": 109.38862871930246,
+    "seeds_reaching_200": 5,
+    "median_first_200": 70000.0,
+    "auc": 121.56430543933332
+  },
+  "fuel": {
+    "seeds": 5,
+    "final_mean": 88.76200219600003,
+    "final_std": 207.13829624100123,
+    "seeds_reaching_200": 5,
+    "median_first_200": 70000.0,
+    "auc": 86.34493319766666
+  }
+}

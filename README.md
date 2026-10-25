@@ -15,7 +15,7 @@ on **reward shaping**: how changing the reward changes what the agent learns.
 
 ![learning curve](results/learning_curve.png)
 
-## Phase 3 findings — reward shaping
+## Phase 3 findings — reward shaping (single seed; superseded by Phase 4 below)
 
 Each run: DQN, same hyperparameters, seed 0, 300k steps (no early stop), best checkpoint by
 periodic eval. Re-scored with `evaluate.py` over 100 episodes on the **stock** reward.
@@ -28,7 +28,7 @@ periodic eval. Re-scored with `evaluate.py` over 100 episodes on the **stock** r
 | Fuel | extra −0.3 when main engine fires | 253.5 ± 66.4 | 90/100 | 125k |
 
 What it shows:
-- **Time cost** reached a good policy fastest (first eval ≥ 200 at 50k steps) and gave the
+- **Time cost** (in this one seed) reached a good policy fastest (first eval ≥ 200 at 50k steps) and gave the
   highest and most consistent final score. It nudges the agent to stop hovering. The risk is
   that a large time penalty can make a quick crash look cheaper than a careful descent;
   at 0.3 per step that did not happen here.
@@ -36,13 +36,67 @@ What it shows:
   penalises tilt, so the extra term mostly duplicates it.
 - **Fuel** was slowest to reach 200 (125k, same as stock) and had the most spread in
   final score.
-- All three scored within noise of stock on the stock reward, so none is a clear win.
+- All three scored within noise of stock on the stock reward, so none is a clear win. The
+  scores above are for the *best checkpoint* of each run, which flatters DQN; see Phase 4.
 
 Caveats: one seed per run, and eval checkpoints swing a lot (e.g. the time run's eval fell from
 246 to −71 later in training), so differences of a few points or ~25k steps are not
 conclusive. The stock run stopped at 125k, the shaped runs trained to 300k, and the
 `--compare` table's training-average columns reflect that, so it is not a like-for-like
 learning-speed comparison. Plots: `results/shaping_comparison.png`.
+
+## Phase 4 — rigorous shaping study (5 seeds, equal budget)
+
+`src/shaping_study.py`: 4 variants × 5 seeds × 300k steps, no early stopping, greedy eval every
+10k steps (20 episodes) on the **stock** reward, no best-checkpoint picking.
+
+| Variant | Final score (mean of last 5 evals, mean ± std over seeds) | Seeds that ever reached 200 | Median first step ≥ 200 | Mean eval return over training |
+|---|---|---|---|---|
+| Stock | -1.0 ± 223.3 | 5/5 | 50k | 64.5 |
+| Tilt | -15.1 ± 218.2 | 5/5 | 90k | 29.8 |
+| Time | 123.5 ± 109.4 | 5/5 | 70k | 121.6 |
+| Fuel | 88.8 ± 207.1 | 5/5 | 70k | 86.3 |
+
+![shaping study](results/shaping_study.png)
+
+What this shows (and what it doesn't):
+- **Every seed of every variant reached 200 at some point, but DQN does not stay there.**
+  Performance collapses later in many seeds (e.g. stock finished at 147, −207, 176, −280, 159
+  across seeds). That instability is the main finding, and it is hidden if you only keep the
+  best checkpoint, as Phase 1/3 did.
+- **Time cost** was the most stable variant (best final mean and best mean return over
+  training, smaller spread). It is the only one that looks better than stock, and with 5
+  seeds and this much spread I would call it suggestive, not proven.
+- **Tilt** gave no benefit (the stock reward already penalises tilt) and was slowest to reach 200.
+- **Fuel** sat in between and was still very seed-dependent.
+
+## Phase 5 — DQN from scratch (raw PyTorch)
+
+`src/dqn_scratch.py` implements the whole algorithm in about 150 lines: replay buffer, Q-network,
+ε-greedy, target network, TD target, Huber loss. Same hyperparameters as the SB3 run, 300k
+steps, seed 0, best checkpoint tested on 100 stock-reward episodes.
+
+Difference to be aware of: the SB3 configuration does one gradient step per environment
+step, mine does one per four, so it is not an exact replica. Result and the SB3/PPO
+comparison are in the table below.
+
+## Phase 6 — continuous LunarLander with PPO
+
+`src/ppo_continuous.py`: the agent outputs two real-valued engine commands instead of choosing
+one of four buttons, which DQN cannot do directly. PPO with 16 parallel environments and the
+RL-Zoo hyperparameters, 1M steps, seed 0.
+
+### Algorithm comparison (stock reward, best checkpoint, 100 episodes, single seed each)
+
+| Agent | Action space | Steps | Mean ± std | Episodes ≥ 200 | Crashes |
+|---|---|---|---|---|---|
+| DQN (SB3) | discrete | 125k (early stop) | 245.0 ± 49.8 | 94/100 | 0 |
+| DQN from scratch | discrete | 300k | 251.9 ± 22.1 | 97/100 | 0 |
+| PPO | continuous | 1M | 250.0 ± 20.8 | 100/100 | 0 |
+
+Caveats: one seed each, best checkpoint selected by the 20-episode eval, and the continuous
+task is a different environment variant, so the PPO score is not strictly comparable to DQN.
+Given the Phase 4 instability, treat these as "can reach ≥ 200", not "reliably stays there".
 
 ## Quick start (macOS)
 
@@ -55,6 +109,9 @@ python src/evaluate.py --watch 3  # 100-episode test + watch 3 landings
 python src/record_video.py        # Phase 2: results/lander.gif
 python src/reward_shaping.py --shaping tilt   # Phase 3: shaped run (repeat with time / fuel)
 python src/reward_shaping.py --compare        # table + results/shaping_comparison.png
+python src/shaping_study.py --run --seeds 5 --workers 4   # Phase 4 (~40 min), then --report
+python src/dqn_scratch.py         # Phase 5: DQN in raw PyTorch (~3 min)
+python src/ppo_continuous.py      # Phase 6: continuous LunarLander + PPO (~15 min)
 ```
 Optional live charts: `tensorboard --logdir results/tensorboard`
 
@@ -112,6 +169,9 @@ src/train_dqn.py       Phase 1  DQN + EvalCallback (stops at 200) + TensorBoard 
 src/evaluate.py        100-episode evaluation on the stock reward
 src/record_video.py    Phase 2  before/after GIF
 src/reward_shaping.py  Phase 3  shaping wrappers + comparison
+src/shaping_study.py   Phase 4  multi-seed shaping study + report
+src/dqn_scratch.py     Phase 5  DQN from scratch (PyTorch)
+src/ppo_continuous.py  Phase 6  PPO on continuous LunarLander
 src/common.py          hyperparameters, plotting helpers
 results/               plots, GIF, models, logs
 ```
